@@ -11,6 +11,7 @@ This project is a Django Rest API for managing telecom company customers. It han
 
 ## Installation
 
+## There are two steps to follow:
 1. Clone the repository:
     ```sh
     git clone https://github.com/abhisheksahu92/telecom.git
@@ -32,9 +33,24 @@ This project is a Django Rest API for managing telecom company customers. It han
     python manage.py runserver
     ```
 
+## OR
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/abhisheksahu92/telecom.git
+    ```
+2. Change into the project directory:
+    ```sh
+    cd telecom-customer-management/telecom_system
+    ```
+3. Run Docker Compose Up:
+    ```sh
+    docker compose up --build
+    ```
+
 ### Testing
    ```sh
-    python manage.py test customers
+    python manage.py test
    ```
 
 ### API Endpoints
