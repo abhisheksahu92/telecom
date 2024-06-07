@@ -1,0 +1,383 @@
+{
+	"info": {
+		"_postman_id": "e77f3a37-a875-4aff-b10f-1b76ec4afd43",
+		"name": "Telecom Customer Management",
+		"description": "Collection for Telecom Customer Management System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34921142",
+		"_collection_link": "https://www.postman.com/security-participant-56192539/workspace/telecom/collection/34921142-e77f3a37-a875-4aff-b10f-1b76ec4afd43?action=share&source=collection_link&creator=34921142"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "Register New Customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Abhishek Sahu\",\n  \"dob\": \"1993-01-01\",\n  \"email\": \"abhishek.sahu@gmail.com\",\n  \"adhar_number\": \"123456789011\",\n  \"assigned_mobile_number\": \"9876543213\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/customers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Customer Details",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Abhishek Pandey\",\n  \"dob\": \"1993-01-01\",\n  \"email\": \"abhishek.sahu@gmail.com\",\n  \"adhar_number\": \"123456789015\",\n  \"assigned_mobile_number\": \"9876543213\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/customers/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer Details",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Jane Doe\",\n  \"dob\": \"1993-01-01\",\n  \"email\": \"abhishek.sahu@gmail.com\",\n  \"adhar_number\": \"123456789015\",\n  \"assigned_mobile_number\": \"9876543213\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/customers/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display Customer Table",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display Customer Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/customer/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer Plan",
+			"item": [
+				{
+					"name": "Choose New Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customer\": 1,\n    \"plan\": 7\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/customer-plans/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer-plans",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display All Customer Plans",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/customer-plans/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer-plans",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display Customer Plan Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/customer-plans/9/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer-plans",
+								"9",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upgrade/Downgrade Plan",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"plan\": 8\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/customer-plans/8/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer-plans",
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer Plan",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/customer-plans/10/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer-plans",
+								"10",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Renew Plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"renewal_date\": \"2024-06-30\",\r\n  \"plan_status\": \"Active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/customer-plans/renew/8/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer-plans",
+								"renew",
+								"8",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plan",
+			"item": [
+				{
+					"name": "Register New Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n\t\"name\": \"Platinum365\",\n\t\"cost\": 499, \n\t\"validity\": 365,\n\t\"status\": \"Active\"\n},\n{\n\t\"name\": \"Gold180\",\n\t\"cost\": 299, \n\t\"validity\": 180,\n\t\"status\": \"Active\"\n},\n{\n\t\"name\": \"Silver90\",\n\t\"cost\": 199,  \n\t\"validity\": 90,\n\t\"status\": \"Active\"\n}\n]"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/plans/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"plans",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display Plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/plans",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"plans"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
