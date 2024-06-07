@@ -13,7 +13,7 @@ This project is a Django Rest API for managing telecom company customers. It han
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/abhisheksahu92/telecom-customer-management.git
+    git clone https://github.com/abhisheksahu92/telecom.git
     ```
 2. Change into the project directory:
     ```sh
